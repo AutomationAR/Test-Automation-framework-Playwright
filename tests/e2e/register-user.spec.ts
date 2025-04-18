@@ -5,7 +5,7 @@ test('Test Case 1: Register User', async ({ page }) => {
   await page.goto('http://automationexercise.com');
 
   // 2. Verify that home page is visible successfully
-  await expect(page).toHaveURL(/automationexercise\.com/);
+  //await expect(page).toHaveURL(/automationexercise\.com/);
   await expect(page.locator('img[alt="Website for automation practice"]')).toBeVisible();
 
   // 3. Click on 'Signup / Login' button

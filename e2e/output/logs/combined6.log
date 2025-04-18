@@ -1,0 +1,23 @@
+[32m [LOGGER]  25-04-18 23:13:59  info : Finished Case 15: Place Order: Register before Checkout with status timedOut[39m
+[32m [LOGGER]  25-04-18 23:13:59  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-18 23:37:54  info : Finished Case 3: Login User with incorrect data with status timedOut[39m
+[32m [LOGGER]  25-04-18 23:37:54  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-18 23:37:54  info : Finished Case 3: Login User with incorrect data with status timedOut[39m
+[32m [LOGGER]  25-04-18 23:37:54  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-18 23:45:39  info : Running Case 17: Remove Products From Cart[39m
+[32m [LOGGER]  25-04-18 23:45:47  info : Finished Case 17: Remove Products From Cart with status passed[39m
+[32m [LOGGER]  25-04-18 23:45:48  info : Running Case 18: View Category Products[39m
+[32m [LOGGER]  25-04-18 23:45:53  info : Finished Case 18: View Category Products with status passed[39m
+[32m [LOGGER]  25-04-18 23:45:53  info : Running Case 19: View & Cart Brand Products[39m
+[32m [LOGGER]  25-04-18 23:45:59  info : Finished Case 19: View & Cart Brand Products with status passed[39m
+[32m [LOGGER]  25-04-18 23:45:59  info : Running Case 20: Search Products and Verify Cart After Login[39m
+[32m [LOGGER]  25-04-18 23:46:09  info : Finished Case 20: Search Products and Verify Cart After Login with status failed[39m
+[32m [LOGGER]  25-04-18 23:46:09  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-18 23:50:25  info : Finished Case 1: Register User with status timedOut[39m
+[32m [LOGGER]  25-04-18 23:50:25  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-19 00:10:40  info : Running Case 15: Place Order: Register before Checkout[39m
+[32m [LOGGER]  25-04-19 00:10:40  info : Running Case 15: Place Order: Register before Checkout[39m
+[32m [LOGGER]  25-04-19 00:11:39  info : Finished Case 15: Place Order: Register before Checkout with status timedOut[39m
+[32m [LOGGER]  25-04-19 00:11:39  info : Finished Case 15: Place Order: Register before Checkout with status timedOut[39m
+[32m [LOGGER]  25-04-19 00:11:39  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-19 00:11:39  info : Did not run as expected, ended up at https://automationexercise.com/login[39m

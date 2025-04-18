@@ -6,10 +6,14 @@
       "outDir": "dist",
       "rootDir": ".",
       "strict": true,
-      "esModuleInterop": true,
       "moduleResolution": "Node",
+      "esModuleInterop": true,
       "skipLibCheck": true,
-      "resolveJsonModule": true
+      "resolveJsonModule": true,
+      "baseUrl": ".",   // ✅ REQUIRED for path aliases to work
+      "paths": {
+        "@data/*": ["test_data/*"]         // ✅ Now this will work relative to baseUrl
+      }
     },
     "include": ["tests", "framework"],
     "exclude": ["node_modules", "dist"]

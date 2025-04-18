@@ -1,0 +1,53 @@
+[32m [LOGGER]  25-04-18 20:16:55  info : Finished Case 17: Remove Products From Cart with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:55  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:57  info : Running Case 18: View Category Products[39m
+[32m [LOGGER]  25-04-18 20:16:57  info : Finished Case 18: View Category Products with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:57  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:17:00  info : Running Case 19: View & Cart Brand Products[39m
+[32m [LOGGER]  25-04-18 20:17:00  info : Finished Case 19: View & Cart Brand Products with status failed[39m
+[32m [LOGGER]  25-04-18 20:17:00  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:17:02  info : Running Case 20: Search Products and Verify Cart After Login[39m
+[32m [LOGGER]  25-04-18 20:17:02  info : Finished Case 20: Search Products and Verify Cart After Login with status failed[39m
+[32m [LOGGER]  25-04-18 20:17:02  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:17:04  info : Running Case 21: Add review on product[39m
+[32m [LOGGER]  25-04-18 20:17:04  info : Finished Case 21: Add review on product with status failed[39m
+[32m [LOGGER]  25-04-18 20:17:04  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:17:06  info : Running Case 22: Add to cart from Recommended items[39m
+[32m [LOGGER]  25-04-18 20:17:06  info : Finished Case 22: Add to cart from Recommended items with status failed[39m
+[32m [LOGGER]  25-04-18 20:17:06  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:17:08  info : Running Case 23: Verify address details in checkout page[39m
+[32m [LOGGER]  25-04-18 20:17:08  info : Finished Case 23: Verify address details in checkout page with status failed[39m
+[32m [LOGGER]  25-04-18 20:17:08  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:17:10  info : Running Case 24: Download Invoice after purchase order[39m
+[32m [LOGGER]  25-04-18 20:17:10  info : Finished Case 24: Download Invoice after purchase order with status failed[39m
+[32m [LOGGER]  25-04-18 20:17:10  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:17:13  info : Running Case 25: Verify Scroll Up using "Arrow" button and Scroll Down functionality[39m
+[32m [LOGGER]  25-04-18 20:17:13  info : Finished Case 25: Verify Scroll Up using "Arrow" button and Scroll Down functionality with status failed[39m
+[32m [LOGGER]  25-04-18 20:17:13  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:17:15  info : Running Case 26: Verify Scroll Up without "Arrow" button and Scroll Down functionality[39m
+[32m [LOGGER]  25-04-18 20:17:15  info : Finished Case 26: Verify Scroll Up without "Arrow" button and Scroll Down functionality with status failed[39m
+[32m [LOGGER]  25-04-18 20:17:15  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:24:36  info : Running Case 1: Register User[39m
+[32m [LOGGER]  25-04-18 20:24:36  info : Running Case 1: Register User[39m
+[32m [LOGGER]  25-04-18 20:25:00  info : Running Case 1: Register User[39m
+[32m [LOGGER]  25-04-18 20:25:15  info : Finished Case 1: Register User with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:25:15  info : Finished Case 1: Register User with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:25:15  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 20:25:15  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 20:25:18  info : Running Case 2: Login User with correct data[39m
+[32m [LOGGER]  25-04-18 20:25:18  info : Running Case 2: Login User with correct data[39m
+[32m [LOGGER]  25-04-18 20:25:39  info : Finished Case 1: Register User with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:25:39  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 20:25:42  info : Running Case 2: Login User with correct data[39m
+[32m [LOGGER]  25-04-18 20:25:58  info : Finished Case 2: Login User with correct data with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:25:58  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 20:25:58  info : Finished Case 2: Login User with correct data with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:25:58  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 20:26:01  info : Running Case 3: Login User with incorrect data[39m
+[32m [LOGGER]  25-04-18 20:26:01  info : Running Case 3: Login User with incorrect data[39m
+[32m [LOGGER]  25-04-18 20:26:21  info : Finished Case 2: Login User with correct data with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:26:21  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 20:26:40  info : Finished Case 3: Login User with incorrect data with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:26:40  info : Finished Case 3: Login User with incorrect data with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:26:40  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 20:26:40  info : Did not run as expected, ended up at https://automationexercise.com/[39m

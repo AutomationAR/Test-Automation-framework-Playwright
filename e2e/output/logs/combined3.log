@@ -1,0 +1,46 @@
+[32m [LOGGER]  25-04-18 20:16:43  info : Running Case 22: Add to cart from Recommended items[39m
+[32m [LOGGER]  25-04-18 20:16:43  info : Running Case 12: Add Products in Cart[39m
+[32m [LOGGER]  25-04-18 20:16:43  info : Running Case 22: Add to cart from Recommended items[39m
+[32m [LOGGER]  25-04-18 20:16:43  info : Finished Case 22: Add to cart from Recommended items with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:43  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:43  info : Finished Case 12: Add Products in Cart with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:43  info : Finished Case 22: Add to cart from Recommended items with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:43  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:43  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:45  info : Running Case 23: Verify address details in checkout page[39m
+[32m [LOGGER]  25-04-18 20:16:45  info : Running Case 13: Verify Product quantity in Cart[39m
+[32m [LOGGER]  25-04-18 20:16:45  info : Running Case 23: Verify address details in checkout page[39m
+[32m [LOGGER]  25-04-18 20:16:45  info : Finished Case 23: Verify address details in checkout page with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:45  info : Finished Case 13: Verify Product quantity in Cart with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:45  info : Finished Case 23: Verify address details in checkout page with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:45  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:45  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:45  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:48  info : Running Case 24: Download Invoice after purchase order[39m
+[32m [LOGGER]  25-04-18 20:16:48  info : Running Case 24: Download Invoice after purchase order[39m
+[32m [LOGGER]  25-04-18 20:16:48  info : Running Case 14: Place Order: Register while Checkout[39m
+[32m [LOGGER]  25-04-18 20:16:48  info : Finished Case 24: Download Invoice after purchase order with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:48  info : Finished Case 24: Download Invoice after purchase order with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:48  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:48  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:48  info : Finished Case 14: Place Order: Register while Checkout with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:48  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:50  info : Running Case 25: Verify Scroll Up using "Arrow" button and Scroll Down functionality[39m
+[32m [LOGGER]  25-04-18 20:16:50  info : Running Case 25: Verify Scroll Up using "Arrow" button and Scroll Down functionality[39m
+[32m [LOGGER]  25-04-18 20:16:50  info : Running Case 15: Place Order: Register before Checkout[39m
+[32m [LOGGER]  25-04-18 20:16:50  info : Finished Case 15: Place Order: Register before Checkout with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:50  info : Finished Case 25: Verify Scroll Up using "Arrow" button and Scroll Down functionality with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:50  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:50  info : Finished Case 25: Verify Scroll Up using "Arrow" button and Scroll Down functionality with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:50  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:50  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:53  info : Running Case 26: Verify Scroll Up without "Arrow" button and Scroll Down functionality[39m
+[32m [LOGGER]  25-04-18 20:16:53  info : Running Case 26: Verify Scroll Up without "Arrow" button and Scroll Down functionality[39m
+[32m [LOGGER]  25-04-18 20:16:53  info : Running Case 16: Place Order: Login before Checkout[39m
+[32m [LOGGER]  25-04-18 20:16:53  info : Finished Case 26: Verify Scroll Up without "Arrow" button and Scroll Down functionality with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:53  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:53  info : Finished Case 26: Verify Scroll Up without "Arrow" button and Scroll Down functionality with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:53  info : Finished Case 16: Place Order: Login before Checkout with status failed[39m
+[32m [LOGGER]  25-04-18 20:16:53  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:53  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 20:16:55  info : Running Case 17: Remove Products From Cart[39m

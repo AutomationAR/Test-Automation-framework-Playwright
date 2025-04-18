@@ -1,0 +1,47 @@
+[32m [LOGGER]  25-04-18 20:26:24  info : Running Case 3: Login User with incorrect data[39m
+[32m [LOGGER]  25-04-18 20:27:04  info : Finished Case 3: Login User with incorrect data with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:27:04  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 20:30:56  info : Running Case 10: Verify Subscription in home page[39m
+[32m [LOGGER]  25-04-18 20:30:56  info : Running Case 10: Verify Subscription in home page[39m
+[32m [LOGGER]  25-04-18 20:31:36  info : Finished Case 10: Verify Subscription in home page with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:31:36  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 20:31:36  info : Finished Case 10: Verify Subscription in home page with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:31:36  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 20:35:49  info : Finished Case 16: Place Order: Login before Checkout with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:35:49  info : Finished Case 16: Place Order: Login before Checkout with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:35:49  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 20:35:49  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 20:39:46  info : Running Case 22: Add to cart from Recommended items[39m
+[32m [LOGGER]  25-04-18 20:40:25  info : Finished Case 22: Add to cart from Recommended items with status timedOut[39m
+[32m [LOGGER]  25-04-18 20:40:25  info : Did not run as expected, ended up at https://automationexercise.com/[39m
+[32m [LOGGER]  25-04-18 21:23:11  info : Finished Case 2: Login User with correct data with status failed[39m
+[32m [LOGGER]  25-04-18 21:23:11  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 21:23:11  info : Finished Case 2: Login User with correct data with status failed[39m
+[32m [LOGGER]  25-04-18 21:23:11  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 21:23:37  info : Finished Case 11: Verify Subscription in Cart page with status failed[39m
+[32m [LOGGER]  25-04-18 21:23:37  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 21:23:37  info : Finished Case 11: Verify Subscription in Cart page with status failed[39m
+[32m [LOGGER]  25-04-18 21:23:37  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 21:23:37  info : Finished Case 2: Login User with correct data with status failed[39m
+[32m [LOGGER]  25-04-18 21:23:37  info : Did not run as expected, ended up at about:blank[39m
+[32m [LOGGER]  25-04-18 21:53:30  info : Bad request, name parameter is missing in POST request.[39m
+[32m [LOGGER]  25-04-18 21:53:30  info : Finished Case 2: Login User with correct data with status failed[39m
+[32m [LOGGER]  25-04-18 21:53:30  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-18 21:56:15  info : Running Case 10: Verify Subscription in home page[39m
+[32m [LOGGER]  25-04-18 21:56:19  info : Finished Case 10: Verify Subscription in home page with status passed[39m
+[32m [LOGGER]  25-04-18 21:56:19  info : Running Case 11: Verify Subscription in Cart page[39m
+[32m [LOGGER]  25-04-18 21:56:23  info : Finished Case 11: Verify Subscription in Cart page with status passed[39m
+[32m [LOGGER]  25-04-18 21:56:24  info : Running Case 12: Add Products in Cart[39m
+[32m [LOGGER]  25-04-18 21:56:31  info : Finished Case 12: Add Products in Cart with status passed[39m
+[32m [LOGGER]  25-04-18 21:56:31  info : Running Case 13: Verify Product quantity in Cart[39m
+[32m [LOGGER]  25-04-18 21:56:39  info : Finished Case 13: Verify Product quantity in Cart with status passed[39m
+[32m [LOGGER]  25-04-18 21:56:39  info : Running Case 14: Place Order: Register while Checkout[39m
+[32m [LOGGER]  25-04-18 21:59:39  info : Finished Case 14: Place Order: Register while Checkout with status timedOut[39m
+[32m [LOGGER]  25-04-18 21:59:39  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-18 22:02:25  info : Running Case 23: Verify address details in checkout page[39m
+[32m [LOGGER]  25-04-18 22:02:34  info : Running Case 23: Verify address details in checkout page[39m
+[32m [LOGGER]  25-04-18 22:03:25  info : Finished Case 23: Verify address details in checkout page with status timedOut[39m
+[32m [LOGGER]  25-04-18 22:03:25  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-18 22:03:34  info : Finished Case 23: Verify address details in checkout page with status timedOut[39m
+[32m [LOGGER]  25-04-18 22:03:34  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-18 23:12:59  info : Running Case 15: Place Order: Register before Checkout[39m

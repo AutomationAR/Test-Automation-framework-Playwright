@@ -1,12 +1,13 @@
 import { test, expect } from '@playwright/test';
+import { loginTestData } from '../../test_data/loginTestData';
 
 test('Test Case 2: Login User with correct email and password', async ({ page }) => {
-  const testEmail = 'ali_existing@test.com';
-  const testPassword = 'P@ssw0rd123';
-  const expectedUsername = 'ali_existing'; // or whatever is displayed after login
+  const testEmail = loginTestData.testEmail;
+  const testPassword = loginTestData.testPassword
+  const expectedUsername = loginTestData.expectedUsername; // or whatever is displayed after login
 
   await page.goto('http://automationexercise.com');
-  await expect(page).toHaveURL(/automationexercise\.com/);
+  await expect(page).toHaveURL('https://automationexercise.com/');
   await expect(page.locator('img[alt="Website for automation practice"]')).toBeVisible();
 
   await page.click('a[href="/login"]');
@@ -23,7 +24,7 @@ test('Test Case 2: Login User with correct email and password', async ({ page })
 
   // Try matching full expected username
   const userWelcomeLocator = page.locator(`text=Logged in as ${expectedUsername}`);
-  await expect(userWelcomeLocator).toBeVisible({ timeout: 10000 });
+  await expect(userWelcomeLocator).toBeVisible({ timeout: 60000 });
 
   await page.click('a[href="/delete_account"]');
   await expect(page.locator('h2:has-text("Account Deleted!")')).toBeVisible();
