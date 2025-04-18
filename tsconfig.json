@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "CommonJS",
+      "lib": ["ESNext", "DOM"],
+      "outDir": "dist",
+      "rootDir": ".",
+      "strict": true,
+      "esModuleInterop": true,
+      "moduleResolution": "Node",
+      "skipLibCheck": true,
+      "resolveJsonModule": true
+    },
+    "include": ["tests", "framework"],
+    "exclude": ["node_modules", "dist"]
+  }
+  

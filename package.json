@@ -1,0 +1,26 @@
+{
+  "name": "test-automation-framework",
+  "version": "1.0.0",
+  "description": "Full-stack test automation with Playwright, PostgreSQL, and gRPC",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test tests/ui",
+    "test:db": "npx playwright test tests/db/user-crud.spec.ts",
+    "test:grpc": "ts-node tests/grpc/echo-crud.spec.ts"
+  },
+  "author": "Ali Raza",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.43.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.13",
+    "@grpc/proto-loader": "^0.7.5",
+    "axios": "^1.5.0",
+    "knex": "^2.5.1",
+    "pg": "^8.11.1"
+  }
+}
