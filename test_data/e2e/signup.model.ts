@@ -20,21 +20,21 @@ export interface UserSignupAddressInfoModel {
 
 //? API
 export interface CreateUserAPIModel {
-  name: 'ali_existing';
-  email: 'ali_existing@test.com';
-  password: 'P@ssw0rd123';
-  title: 'asdfgh';
-  day: 15;
-  month: '0ct';
-  year: '1995';
-  firstName: 'ali';
-  lastName: 'raza';
+  name: string;
+  email: string;
+  password: string;
+  title: string;
+  day: string;
+  month: string;
+  year: string;
+  firstName: string;
+  lastName: string;
   company: string;
-  address: 'asdfgh';
+  address: string;
   address2: string;
-  country: 'pakistan';
-  state: 'punjab';
-  city: 'lahore';
-  zipCode: '12345';
-  phoneNumber: '098765432';
+  country: string;
+  state: string;
+  city: string;
+  zipCode: string;
+  phoneNumber: string;
 }

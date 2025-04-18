@@ -1,4 +1,4 @@
-import { CardInfoModel } from '@_e2e/models/e2e/payment.model';
+import { CardInfoModel } from '../test_data/e2e/payment.model';
 import { faker } from '@faker-js/faker';
 
 export function createCardInfoForm(): CardInfoModel {

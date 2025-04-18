@@ -1,4 +1,4 @@
-import { UserSignupAddressInfoModel, UserSignupBasicInfoModel } from '@_e2e/models/e2e/signup.model';
+import { UserSignupAddressInfoModel, UserSignupBasicInfoModel } from '../test_data/e2e/signup.model';
 import { faker } from '@faker-js/faker';
 
 export function createSignupUserBasicInfo(): UserSignupBasicInfoModel {

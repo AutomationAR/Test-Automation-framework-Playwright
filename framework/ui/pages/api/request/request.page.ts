@@ -1,5 +1,5 @@
-import { CreateAccountApiModel } from '@_e2e/models/api/authentication/create-account.model';
-import { ProductApiModel, UpdateBrandListApiModel } from '@_e2e/models/api/products/products.model';
+import { CreateAccountApiModel } from '../../../../../test_data/api/authentication/create-account.model';
+import { ProductApiModel, UpdateBrandListApiModel } from '../../../../../test_data//api/products/products.model';
 import { APIRequestContext, APIResponse } from '@playwright/test';
 
 export class RequestApiPage {

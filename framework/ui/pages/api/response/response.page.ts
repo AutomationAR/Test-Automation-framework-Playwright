@@ -1,5 +1,5 @@
-import { CreateAccountBodyApiModel } from '@_e2e/models/api/authentication/create-account.model';
-import { ProductApiModel } from '@_e2e/models/api/products/products.model';
+import { CreateAccountBodyApiModel } from '../../../../../test_data//api/authentication/create-account.model';
+import { ProductApiModel } from '../../../../../test_data//api/products/products.model';
 import { APIResponse, expect } from '@playwright/test';
 
 export class ResponseApiPage {

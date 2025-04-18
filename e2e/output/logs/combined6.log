@@ -21,3 +21,22 @@
 [32m [LOGGER]  25-04-19 00:11:39  info : Finished Case 15: Place Order: Register before Checkout with status timedOut[39m
 [32m [LOGGER]  25-04-19 00:11:39  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
 [32m [LOGGER]  25-04-19 00:11:39  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-19 00:40:53  info : Finished Case 3: Login User with incorrect data with status timedOut[39m
+[32m [LOGGER]  25-04-19 00:40:53  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-19 00:47:58  info : Running Case 2: Login User with correct data[39m
+[32m [LOGGER]  25-04-19 00:48:04  info : Bad request, name parameter is missing in POST request.[39m
+[32m [LOGGER]  25-04-19 00:48:04  info : Finished Case 2: Login User with correct data with status failed[39m
+[32m [LOGGER]  25-04-19 00:48:04  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-19 00:56:30  info : Running Case 17: Remove Products From Cart[39m
+[32m [LOGGER]  25-04-19 00:56:36  info : Finished Case 17: Remove Products From Cart with status passed[39m
+[32m [LOGGER]  25-04-19 00:56:36  info : Running Case 18: View Category Products[39m
+[32m [LOGGER]  25-04-19 00:56:42  info : Finished Case 22: Add to cart from Recommended items with status passed[39m
+[32m [LOGGER]  25-04-19 00:56:42  info : Running Case 23: Verify address details in checkout page[39m
+[32m [LOGGER]  25-04-19 00:56:42  info : Finished Case 18: View Category Products with status passed[39m
+[32m [LOGGER]  25-04-19 00:56:42  info : Running Case 19: View & Cart Brand Products[39m
+[32m [LOGGER]  25-04-19 00:56:48  info : Finished Case 19: View & Cart Brand Products with status passed[39m
+[32m [LOGGER]  25-04-19 00:56:48  info : Running Case 20: Search Products and Verify Cart After Login[39m
+[32m [LOGGER]  25-04-19 00:56:58  info : Finished Case 20: Search Products and Verify Cart After Login with status failed[39m
+[32m [LOGGER]  25-04-19 00:56:58  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
+[32m [LOGGER]  25-04-19 00:57:42  info : Finished Case 23: Verify address details in checkout page with status timedOut[39m
+[32m [LOGGER]  25-04-19 00:57:42  info : Did not run as expected, ended up at https://automationexercise.com/login[39m
