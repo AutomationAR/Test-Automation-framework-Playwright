@@ -1,4 +1,4 @@
-import { CardInfoModel } from '../../../../../test_data/e2e/payment.model';
+import { CardInfoModel } from '../../../../../models/e2e/payment.model';
 import { BasePage } from '../base.page';
 import { PaymentDonePage } from './payment-done.page';
 import { type Locator, type Page } from '@playwright/test';

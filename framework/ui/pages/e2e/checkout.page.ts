@@ -1,6 +1,6 @@
 import * as data from '../../../../test_data/e2e/app.data.json';
-import { CheckoutDescModel } from '../../../../test_data/e2e/checkout.model';
-import { UserSignupAddressInfoModel } from '../../../../test_data/e2e/signup.model';
+import { CheckoutDescModel } from '../../../../models/e2e/checkout.model';
+import { UserSignupAddressInfoModel } from '../../../../models/e2e/signup.model';
 import { BasePage } from './base.page';
 import { PaymentPage } from './payment/payment.page';
 import { type Locator, type Page, expect } from '@playwright/test';

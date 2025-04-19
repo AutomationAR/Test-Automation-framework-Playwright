@@ -1,4 +1,4 @@
-import { ContactUsModel } from '../test_data/e2e/contact-us.model';
+import { ContactUsModel } from '../models/e2e/contact-us.model';
 import { faker } from '@faker-js/faker';
 
 export function createContactUsForm(): ContactUsModel {

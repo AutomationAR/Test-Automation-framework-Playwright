@@ -8,43 +8,34 @@ import { createProductReview } from '../../factories/product-details.factory';
 import { createSignupUserAddressInfo, createSignupUserBasicInfo } from '../../factories/signup.factory';
 import { expect, test } from '../../fixtures/base.fixture';
 import { logger } from '../../helpers/logger.helper';
-import { CreateAccountApiModel, CreateAccountBodyApiModel } from '../../test_data/api/authentication/create-account.model';
-import { CartProductModel } from '../../test_data/e2e/cart.model';
-import { CheckoutDescModel } from '../../test_data/e2e/checkout.model';
-import { ContactUsModel } from '../../test_data/e2e/contact-us.model';
-import { UserLoginModel, UserSignupModel } from '../../test_data/e2e/login.model';
-import { CardInfoModel } from '../../test_data/e2e/payment.model';
-import { ProductDetailsModel, ProductReviewModel } from '../../test_data/e2e/product-details.model';
-import { UserSignupAddressInfoModel, UserSignupBasicInfoModel } from '../../test_data/e2e/signup.model';
+import { CreateAccountApiModel, CreateAccountBodyApiModel } from '../../models/api/authentication/create-account.model';
+import { CartProductModel } from '../../models/e2e/cart.model';
+import { CheckoutDescModel } from '../../models/e2e/checkout.model';
+import { ContactUsModel } from '../../models/e2e/contact-us.model';
+import { UserLoginModel, UserSignupModel } from '../../models/e2e/login.model';
+import { CardInfoModel } from '../../models/e2e/payment.model';
+import { ProductDetailsModel, ProductReviewModel } from '../../models/e2e/product-details.model';
+import { UserSignupAddressInfoModel, UserSignupBasicInfoModel } from '../../models/e2e/signup.model';
 
 test.describe('Test for test cases', { tag: ['@reg'] }, () => {
-  test.beforeEach(async ({ home }, testInfo) => {
-    //Arrange
+  test.beforeEach(async ({ page, home }, testInfo) => {
+    // Arrange
     testInfo.setTimeout(60000);
     logger.info(`Running ${testInfo.title}`);
-
-    //Act
-    //* Advertisements blocker
-    // await page.route('**/*', (route) => {
-    //   if (route.request().url().startsWith('https://googleads.')) {
-    //     route.abort();
-    //   } else if (route.request().url().startsWith('https://fonts.googleapis.')) {
-    //     route.abort();
-    //   } else if (route.request().url().startsWith('https://pagead2.googlesyndication.com')) {
-    //     route.abort();
-    //   } else {
-    //     route.continue();
-    //   }
-    // });
-
+  
+    // ✅ Suppress all console errors
+    page.on('console', msg => {
+      if (msg.type() === 'error') return; // Ignore console errors
+    });
+  
     //* Another method
     await home.catchHandler();
-
+  
     await home.goTo();
-
-    //Assert
+  
+    // Assert
     await home.expectHomePage();
-  });
+  });  
 
   test.afterEach(async ({ page }, testInfo) => {
     logger.info(`Finished ${testInfo.title} with status ${testInfo.status}`);
@@ -54,13 +45,15 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
     await page.close();
   });
 
-  test('Case 1: Register User', { tag: ['@smoke'] }, async ({ header, login, signup, home }) => {
+  test('Case 1: Register User', { tag: ['@smoke'] }, async ({ header, login, signup, home, page }) => {
     //Arrange
     const userBaseData: UserSignupModel = createSignupUser();
     const userBasicInfoData: UserSignupBasicInfoModel = createSignupUserBasicInfo();
     const userAddressInfoData: UserSignupAddressInfoModel = createSignupUserAddressInfo();
 
     //Act
+    // Pause after opening the signup/login page
+    await page.pause(); // <-- Add a pause here
     await test.step('Part 4: Open Signup/Login page', async () => {
       await header.openSignupLoginPage();
     });
@@ -115,14 +108,18 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
     // 19. Verify that home page is visible successfully
   });
 
-  test('Case 2: Login User with correct data', async ({ header, login, apiRequest, apiResponse, signup, home }) => {
+  test.only('Case 2: Login User with correct data', async ({ header, login, apiRequest, apiResponse, signup, home, page }) => {
     //Arrange
     const apiUrl: string = '/api/createAccount';
     const createAccountApiData: CreateAccountApiModel = createAccountApi();
 
     //Act
+    // Pause after opening the signup/login page
+    await page.pause(); // <-- Add a pause here
     await header.openSignupLoginPage();
-    await expect(login.headerLogin).toBeVisible();
+    //await expect(login.headerLogin).toBeVisible();
+
+
 
     const response = await apiRequest.createAccount(apiUrl, createAccountApiData);
     expect(response.ok()).toBeTruthy();

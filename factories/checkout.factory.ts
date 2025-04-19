@@ -1,4 +1,4 @@
-import { CheckoutDescModel } from '../test_data/e2e/checkout.model';
+import { CheckoutDescModel } from '../models/e2e/checkout.model';
 import { faker } from '@faker-js/faker';
 
 export function randomDesc(): CheckoutDescModel {

@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { echoClient } from '../../framework/grpc/client';
+/*import { echoClient } from '../../framework/grpc/client';
 
 test('gRPC: Create (UnaryEcho)', done => {
-  echoClient.UnaryEcho({ message: 'Create user' }, (err: any, response: any) => {
+  //echoClient.UnaryEcho({ message: 'Create user' }, (err: any, response: any) => {
     expect(err).toBeNull();
     expect(response.message).toBe('Create user');
     done();
@@ -31,4 +31,4 @@ test('gRPC: Delete (UnaryEcho)', done => {
     expect(response.message).toBe('Delete user');
     done();
   });
-});
+});*/

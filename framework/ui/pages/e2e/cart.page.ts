@@ -1,5 +1,5 @@
 import * as data from '../../../../test_data/e2e/app.data.json';
-import { CartProductModel } from '../../../../test_data/e2e/cart.model';
+import { CartProductModel } from '../../../../models/e2e/cart.model';
 import { LoginPage } from './authentication/login.page';
 import { BasePage } from './base.page';
 import { type Locator, type Page, expect } from '@playwright/test';

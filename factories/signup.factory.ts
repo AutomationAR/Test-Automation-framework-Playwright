@@ -1,4 +1,4 @@
-import { UserSignupAddressInfoModel, UserSignupBasicInfoModel } from '../test_data/e2e/signup.model';
+import { UserSignupAddressInfoModel, UserSignupBasicInfoModel } from '../models/e2e/signup.model';
 import { faker } from '@faker-js/faker';
 
 export function createSignupUserBasicInfo(): UserSignupBasicInfoModel {
@@ -16,7 +16,7 @@ export function createSignupUserAddressInfo(): UserSignupAddressInfoModel {
     company: faker.company.name(),
     address: faker.location.streetAddress({ useFullAddress: true }),
     address2: faker.location.secondaryAddress(),
-    country: 'Australia',
+    country: 'United States',
     state: faker.location.state(),
     city: faker.location.city(),
     zipCode: faker.location.zipCode(),

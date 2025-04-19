@@ -1,21 +1,15 @@
 {
-    "compilerOptions": {
-      "target": "ESNext",
-      "module": "CommonJS",
-      "lib": ["ESNext", "DOM"],
-      "outDir": "dist",
-      "rootDir": ".",
-      "strict": true,
-      "moduleResolution": "Node",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "resolveJsonModule": true,
-      "baseUrl": ".",   // ✅ REQUIRED for path aliases to work
-      "paths": {
-        "@data/*": ["test_data/*"]         // ✅ Now this will work relative to baseUrl
-      }
-    },
-    "include": ["tests", "framework"],
-    "exclude": ["node_modules", "dist"]
-  }
+  "compilerOptions": {
+    "lib": ["ES2021", "dom"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "sourceMap": true,
+    "target": "ESNext",
+    "module": "CommonJS",
+    "baseUrl": "./",
+    "paths": { "@data/*": ["test_data/*"] }
+  },
+  "exclude": ["node_modules", "e2e/output/**", "e2e/download/**"]
+}
   

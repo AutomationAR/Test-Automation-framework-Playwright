@@ -1,4 +1,4 @@
-import { UserLoginModel, UserSignupModel } from '../test_data/e2e/login.model';
+import { UserLoginModel, UserSignupModel } from '../models/e2e/login.model';
 import { faker } from '@faker-js/faker';
 
 export function createFakeLoginUser(): UserLoginModel {
@@ -10,10 +10,12 @@ export function createFakeLoginUser(): UserLoginModel {
 }
 
 export function createSignupUser(sex?: 'female' | 'male'): UserSignupModel {
-  const name = faker.person.firstName(sex) ?? faker.person.firstName();
+  const name = faker.person.firstName(sex);
+  const email = faker.internet.email({ firstName: name, provider: 'fakerjs.dev' });
+
   const userSignupModel: UserSignupModel = {
-    name: name,
-    email: faker.internet.email({ firstName: name, provider: 'fakerjs.dev' }),
+    name,
+    email,
   };
   return userSignupModel;
 }

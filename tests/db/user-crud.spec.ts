@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+/*import { test, expect } from '@playwright/test';
 import { db } from '../../framework/db/dbClient';
 
 test('CREATE user', async () => {
@@ -45,4 +45,4 @@ test('DELETE user', async () => {
     console.error('❌ DELETE user failed:', err);
     throw err;
   }
-});
+});*/

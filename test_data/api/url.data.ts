@@ -1,3 +1,3 @@
 export const urlAPIData = {
-  createAccount: '/api/createAccount',
+  //createAccount: '/api/createAccount',
 };

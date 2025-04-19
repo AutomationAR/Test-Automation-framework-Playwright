@@ -1,4 +1,4 @@
-import { CreateAccountApiModel } from '../../../test_data/api/authentication/create-account.model';
+import { CreateAccountApiModel } from '../../../models/api/authentication/create-account.model';
 import { faker } from '@faker-js/faker';
 
 export function createAccountApi(): CreateAccountApiModel {
@@ -15,7 +15,7 @@ export function createAccountApi(): CreateAccountApiModel {
     company: faker.company.name(),
     address1: faker.location.streetAddress({ useFullAddress: true }),
     address2: faker.location.secondaryAddress(),
-    country: 'Australia',
+    country: 'United States',
     zipcode: faker.location.zipCode(),
     state: faker.location.state(),
     city: faker.location.city(),

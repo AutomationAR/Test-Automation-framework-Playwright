@@ -1,5 +1,5 @@
 import * as data from '../../../../test_data/e2e/app.data.json';
-import { ContactUsModel } from '../../../../test_data/e2e/contact-us.model';
+import { ContactUsModel } from '../../../../models/e2e/contact-us.model';
 import { BasePage } from './base.page';
 import { type Locator, type Page } from '@playwright/test';
 

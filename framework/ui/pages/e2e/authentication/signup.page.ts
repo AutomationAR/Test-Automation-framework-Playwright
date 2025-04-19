@@ -1,5 +1,5 @@
-import { UserSignupModel } from '../../../../../test_data/e2e/login.model';
-import { UserSignupAddressInfoModel, UserSignupBasicInfoModel } from '../../../../../test_data/e2e/signup.model';
+import { UserSignupModel } from '../../../../../models/e2e/login.model';
+import { UserSignupAddressInfoModel, UserSignupBasicInfoModel } from '../../../../../models/e2e/signup.model';
 import { BasePage } from '../base.page';
 import { AccountCreatedPage } from './account-created.page';
 import { DeleteAccountPage } from './delete-account.page';
@@ -76,7 +76,7 @@ export class SignupPage extends BasePage {
   }
 
   private async fillBasicInformation(user: UserSignupBasicInfoModel): Promise<void> {
-    await this.checkboxGenderMrs.click();
+    await this.checkboxGenderMr.click();
     await this.fieldPassword.fill(user.password);
     await this.selectDays.selectOption(user.day);
     await this.selectMonths.selectOption(user.month);
