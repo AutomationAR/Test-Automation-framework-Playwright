@@ -787,7 +787,7 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
     // 8. Verify that user is navigated to that brand page and can see products
   });
 
-  test('Case 20: Search Products and Verify Cart After Login', async ({ header, products, cart, login }) => {
+  test('Case 20: Search Products and Verify Cart After Login', async ({ header, products, cart, login, page }) => {
     //Arrange
     const search: string = 'Blue';
     const expectProductNumber: number = 7;
@@ -840,6 +840,7 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
 
     // 9. Click 'Cart' button and verify that products are visible in cart
     await header.openCartPage();
+    await page.waitForTimeout(500);
     const cartProductNumber = await cart.rowForProduct.count();
     expect(cartProductNumber).toBe(foundProducts);
     // 10. Click 'Signup / Login' button and submit login details

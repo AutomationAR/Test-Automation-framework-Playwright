@@ -7,7 +7,7 @@
     "test": "npx playwright test",
     "test:ui": "npx playwright test tests/e2e",
     "test:db": "npx playwright test tests/db",
-    "test:grpc": "ts-node tests/grpc",
+    "test:grpc": "npx playwright test tests/grpc",
     "format": "npx prettier --write .",
     "format:check": "npx prettier . --check \"!**.ts\"",
     "lint": "npx eslint . --max-warnings 0",
@@ -25,7 +25,7 @@
     "@faker-js/faker": "^9.5.0",
     "@playwright/test": "^1.51.1",
     "@trivago/prettier-plugin-sort-imports": "^5.2.1",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.14.1",
     "@types/pg": "^8.11.13",
     "dotenv": "^16.4.7",
     "eslint": "^9.17.0",
@@ -34,11 +34,14 @@
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.14.0",
     "prettier": "^3.4.2",
-    "typescript": "^5.7.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
     "typescript-eslint": "^8.18.2",
     "winston": "^3.17.0"
   },
   "dependencies": {
+    "@grpc/grpc-js": "^1.13.3",
+    "@grpc/proto-loader": "^0.7.15",
     "pg": "^8.14.1"
   }
 }

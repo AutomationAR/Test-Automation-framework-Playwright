@@ -58,7 +58,7 @@ export class ContactUsPage extends BasePage {
     await expect(messageField).toHaveValue(form.message);
 
     await submitButton.waitFor({ state: 'visible' });
-    await this.page.waitForTimeout(500);
+    await this.page.waitForTimeout(1000);
     await submitButton.click();
     await this.page.waitForTimeout(500);
   }
