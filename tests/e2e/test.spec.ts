@@ -45,15 +45,13 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
     await page.close();
   });
 
-  test('Case 1: Register User', { tag: ['@smoke'] }, async ({ header, login, signup, home, page }) => {
+  test('Case 1: Register User', { tag: ['@smoke'] }, async ({ header, login, signup, home }) => {
     //Arrange
     const userBaseData: UserSignupModel = createSignupUser();
     const userBasicInfoData: UserSignupBasicInfoModel = createSignupUserBasicInfo();
     const userAddressInfoData: UserSignupAddressInfoModel = createSignupUserAddressInfo();
 
     //Act
-    // Pause after opening the signup/login page
-    await page.pause(); // <-- Add a pause here
     await test.step('Part 4: Open Signup/Login page', async () => {
       await header.openSignupLoginPage();
     });
@@ -108,16 +106,15 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
     // 19. Verify that home page is visible successfully
   });
 
-  test.only('Case 2: Login User with correct data', async ({ header, login, apiRequest, apiResponse, signup, home, page }) => {
+  test('Case 2: Login User with correct data', async ({ header, login, apiRequest, apiResponse, signup, home}) => {
     //Arrange
     const apiUrl: string = '/api/createAccount';
     const createAccountApiData: CreateAccountApiModel = createAccountApi();
 
     //Act
-    // Pause after opening the signup/login page
-    await page.pause(); // <-- Add a pause here
     await header.openSignupLoginPage();
-    //await expect(login.headerLogin).toBeVisible();
+    console.log('Sending createAccountApiData:', createAccountApiData);
+    await expect(login.headerLogin).toBeVisible();
 
 
 
@@ -177,9 +174,9 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
   test('Case 4: Logout User', async ({ header, login }) => {
     //Arrange
     const userLoginData: UserLoginModel = {
-      email: process.env.USER_EMAIL as string,
-      password: process.env.USER_PASSWORD as string,
-      username: process.env.USER as string,
+      email: process.env.USER_EMAIL ?? 'ali786@gmail.com',
+      password: process.env.USER_PASSWORD ?? 'Test@1234',
+      username: process.env.USER ?? 'ali.raza786',
     };
 
     //Act
@@ -205,11 +202,11 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
     // 10. Verify that user is navigated to login page
   });
 
-  test('Case 5: Register User with existing email', async ({ header, login }) => {
+  test('Case 5: Register User with existing email', async ({ header, login, page }) => {
     //Arrange
     const userBaseData: UserSignupModel = {
-      name: process.env.USER as string,
-      email: process.env.USER_EMAIL as string,
+      name: process.env.USER ?? 'ali.raza786',
+      email: process.env.USER_EMAIL ?? 'ali786@gmail.com',
     };
 
     //Act
@@ -231,9 +228,10 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
     // 8. Verify error 'Email Address already exist!' is visible
   });
 
-  test('Case 6: Contact Us Form', async ({ header, contactUs, home }) => {
+  test('Case 6: Contact Us Form', async ({ header, contactUs, home}) => {
     //Arrange
     const contactUsFormData: ContactUsModel = createContactUsForm();
+    console.log('Contact Form Data:', contactUsFormData); // Debug
 
     //Act
     await header.openContactUsPage();
@@ -386,7 +384,7 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
     // 8. Verify success message 'You have been successfully subscribed!' is visible
   });
 
-  test('Case 12: Add Products in Cart', async ({ header, products, cart }) => {
+  test('Case 12: Add Products in Cart', async ({ header, products, cart, page }) => {
     //Arrange
     const productsData: CartProductModel[] = [
       {
@@ -407,6 +405,7 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
     await header.openProductsPage();
     await products.addProductNumberAndContinue(productsData[0].id!);
     await products.addProductNumberAndViewCart(productsData[1].id!);
+    await page.waitForTimeout(500);
     const rows = await cart.rowForProduct.count();
     expect(rows).toBe(2);
 
@@ -794,8 +793,8 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
     const expectProductNumber: number = 7;
 
     const userLoginData: UserLoginModel = {
-      email: process.env.USER_EMAIL as string,
-      password: process.env.USER_PASSWORD as string,
+      email: process.env.USER_EMAIL ?? 'ali786@gmail.com',
+      password: process.env.USER_PASSWORD ?? 'Test@1234',
     };
 
     //Act

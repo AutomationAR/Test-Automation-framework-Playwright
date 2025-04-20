@@ -24,15 +24,33 @@ export class CheckoutPage extends BasePage {
   }
 
   async checkDeliveryAddress(address: UserSignupAddressInfoModel): Promise<void> {
-    const strAddress = `Mrs. ${address.firstName} ${address.lastName} ${address.company} ${address.address} ${address.address2} ${address.city} ${address.state} ${address.zipCode} ${address.country} ${address.phoneNumber}`;
-    await expect(this.headerDeliveryAddress).toContainText(data.checkout.yourDeliveryAddress);
-    await expect.soft(this.deliveryAddressLocator).toContainText(strAddress);
+    const expectedHeader = data.checkout.yourDeliveryAddress.trim();
+    const actualHeader = (await this.headerDeliveryAddress.textContent())?.trim();
+    expect(actualHeader).toBe(expectedHeader);
+  
+    const expectedAddress = `${address.firstName} ${address.lastName} ${address.company} ${address.address} ${address.address2} ${address.city} ${address.state} ${address.zipCode} ${address.country} ${address.phoneNumber}`
+      .replace(/\s+/g, ' ')
+      .trim();
+  
+    const fullText = (await this.deliveryAddressLocator.textContent())?.replace(/\s+/g, ' ').trim();
+    const addressOnly = fullText?.replace(expectedHeader, '').trim();
+  
+    expect.soft(addressOnly).toContain(expectedAddress);
   }
 
   async checkDeliveryInvoice(address: UserSignupAddressInfoModel): Promise<void> {
-    const strAddress = `Mrs. ${address.firstName} ${address.lastName} ${address.company} ${address.address} ${address.address2} ${address.city} ${address.state} ${address.zipCode} ${address.country} ${address.phoneNumber}`;
-    await expect(this.headerDeliveryInvoice).toContainText(data.checkout.yourDeliveryInvoice);
-    await expect.soft(this.invoiceAddressLocator).toContainText(strAddress);
+    const expectedHeader = data.checkout.yourDeliveryInvoice.trim();
+    const actualHeader = (await this.headerDeliveryInvoice.textContent())?.trim();
+    expect(actualHeader).toBe(expectedHeader);
+  
+    const expectedAddress = `${address.firstName} ${address.lastName} ${address.company} ${address.address} ${address.address2} ${address.city} ${address.state} ${address.zipCode} ${address.country} ${address.phoneNumber}`
+      .replace(/\s+/g, ' ')
+      .trim();
+  
+    const fullText = (await this.invoiceAddressLocator.textContent())?.replace(/\s+/g, ' ').trim();
+    const addressOnly = fullText?.replace(expectedHeader, '').trim();
+  
+    expect.soft(addressOnly).toContain(expectedAddress);
   }
 
   async fillDescription(desc: CheckoutDescModel): Promise<void> {

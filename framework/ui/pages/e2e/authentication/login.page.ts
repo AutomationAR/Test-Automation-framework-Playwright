@@ -34,17 +34,21 @@ export class LoginPage extends BasePage {
   }
 
   async expectLoginPage(): Promise<void> {
-    //await expect(this.page).toHaveURL('/login');
-    //await expect(this.page).toHaveTitle(data.title.login);
+    await expect(this.page).toHaveURL('/login');
+    await expect(this.page).toHaveTitle(data.title.login);
   }
 
   async loginToAccount(user: UserLoginModel): Promise<HomePage> {
-    await this.fieldLoginEmail.fill(user.email as string);
-    await this.fieldLoginPassword.fill(user.password as string);
+    if (!user.email || !user.password) {
+      throw new Error('Both email and password must be provided to login.');
+    }
+  
+    await this.fieldLoginEmail.fill(user.email);
+    await this.fieldLoginPassword.fill(user.password);
     await this.buttonLogin.click();
     return new HomePage(this.page);
   }
-
+  
   async fillUserSignup(user: UserSignupModel): Promise<SignupPage> {
     await this.fieldSignupName.fill(user.name);
     await this.fieldSignupEmail.fill(user.email);

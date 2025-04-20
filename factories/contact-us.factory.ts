@@ -1,12 +1,12 @@
 import { ContactUsModel } from '../models/e2e/contact-us.model';
-import { faker } from '@faker-js/faker';
 
 export function createContactUsForm(): ContactUsModel {
-  const contactUsForm: ContactUsModel = {
-    name: faker.person.fullName(),
-    email: faker.internet.email({ provider: 'fakerjs.dev' }),
-    subject: faker.lorem.sentence({ min: 5, max: 7 }),
-    message: faker.lorem.paragraphs({ min: 2, max: 4 }),
+  const timestamp = Date.now();
+
+  return {
+    name: `Test User ${timestamp}`,
+    email: `testuser${timestamp}@example.com`,
+    subject: `Test Subject ${timestamp}`,
+    message: `This is a test message for contact us form created at ${new Date(timestamp).toISOString()}.\n\nIt is used for automated testing.`,
   };
-  return contactUsForm;
 }

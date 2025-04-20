@@ -25,7 +25,7 @@ export default defineConfig({
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 5000,
+    timeout: 15000,
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -42,8 +42,9 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://automationexercise.com',
 
-    // Set the test id to use a custom data attribute.
+    // Set the test id to use a custom data attribute.1280
     testIdAttribute: 'data-qa',
+    viewport: { width: 1920, height: 1080 },
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-failure',

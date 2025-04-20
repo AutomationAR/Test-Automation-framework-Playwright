@@ -1,7 +1,7 @@
 import * as data from '../../../../test_data/e2e/app.data.json';
 import { ContactUsModel } from '../../../../models/e2e/contact-us.model';
 import { BasePage } from './base.page';
-import { type Locator, type Page } from '@playwright/test';
+import { expect, type Locator, type Page } from '@playwright/test';
 
 export class ContactUsPage extends BasePage {
   readonly header: Locator;
@@ -28,11 +28,38 @@ export class ContactUsPage extends BasePage {
   }
 
   async fillContactUs(form: ContactUsModel): Promise<void> {
-    await this.fieldName.fill(form.name);
-    await this.fieldEmail.fill(form.email);
-    await this.fieldSubject.fill(form.subject);
-    await this.fieldMessage.fill(form.message);
-    await this.fieldFileUpload.setInputFiles('./e2e/assets/images/image.jpg');
-    await this.buttonSubmit.click();
+    // Use data-qa, name, or input types for more stable selectors
+    const nameField = this.page.locator('input[name="name"]');
+    const emailField = this.page.locator('input[data-qa="email"]');
+    const subjectField = this.page.locator('input[name="subject"]');
+    const messageField = this.page.locator('textarea[name="message"]');
+    const fileUploadField = this.page.locator('input[type="file"]');
+    const submitButton = this.page.locator('input[name="submit"]');
+  
+    await nameField.waitFor({ state: 'visible' });
+    await nameField.fill(form.name);
+  
+    await emailField.waitFor({ state: 'visible' });
+    await emailField.fill(form.email);
+  
+    await subjectField.waitFor({ state: 'visible' });
+    await subjectField.fill(form.subject);
+  
+    await messageField.waitFor({ state: 'visible' });
+    await messageField.fill(form.message);
+  
+    await fileUploadField.waitFor({ state: 'visible' });
+    await fileUploadField.setInputFiles('./test_data/images/image.jpg');
+
+     // Confirm fields are filled correctly
+    await expect(nameField).toHaveValue(form.name);
+    await expect(emailField).toHaveValue(form.email);
+    await expect(subjectField).toHaveValue(form.subject);
+    await expect(messageField).toHaveValue(form.message);
+
+    await submitButton.waitFor({ state: 'visible' });
+    await this.page.waitForTimeout(500);
+    await submitButton.click();
+    await this.page.waitForTimeout(500);
   }
 }
