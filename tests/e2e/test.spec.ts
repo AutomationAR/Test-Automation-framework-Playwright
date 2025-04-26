@@ -713,37 +713,38 @@ test.describe('Test for test cases', { tag: ['@reg'] }, () => {
     // 7. Click 'X' button corresponding to particular product
     // 8. Verify that product is removed from the cart
   });
-
+  
   test('Case 18: View Category Products', async ({ home }) => {
-    //Arrange
+    // Arrange
     const womenProductData = {
       category: 'Women',
-      products: 'Dress',
-      header: data.products.headers.women.dress,
-      title: data.title.productWomenDress,
+      products: 'Tops',
+      header: data.products.headers.women.tops,
+      title: data.title.productWomenTops,
     };
-
+  
     const menProductData = {
       category: 'Men',
-      products: 'Jeans',
-      header: data.products.headers.men.jeans,
-      title: data.title.productMenJeans,
+      products: 'Tshirts',
+      header: data.products.headers.men.tshirts,
+      title: data.title.productMenTshirts,
     };
-
-    //Act
+  
+    // Act
     await home.leftSidebar.expectLeftSidebar();
-
+  
     await home.leftSidebar.openCategoryByName(womenProductData.category);
     await home.leftSidebar.openCategoryProductsByName(womenProductData.products);
-
+  
     await home.categoryProducts.expectCategoryProductsPage(womenProductData.title);
     await expect(home.categoryProducts.getHeaderName(womenProductData.header)).toBeVisible();
-
+  
     await home.leftSidebar.openCategoryByName(menProductData.category);
     await home.leftSidebar.openCategoryProductsByName(menProductData.products);
-
+  
     await home.categoryProducts.expectCategoryProductsPage(menProductData.title);
-    //Assert
+  
+    // Assert
     await expect(home.categoryProducts.getHeaderName(menProductData.header)).toBeVisible();
 
     // Test Case 18: View Category Products
