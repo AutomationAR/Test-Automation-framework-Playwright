@@ -1,84 +1,60 @@
 import { test, expect } from '@playwright/test';
-import * as grpc from '@grpc/grpc-js';
-import * as protoLoader from '@grpc/proto-loader';
+import { createMember, getMember, updateMember, deleteMember, createGrpcClient } from '../../framework/grpc/grpcclient';
 import { startGrpcServer, stopGrpcServer } from '../../framework/grpc/setup';
+import getPort from 'get-port';
+import * as grpc from '@grpc/grpc-js';
 
-const PROTO_PATH = './test_data/grpc/service.proto';
+let server: grpc.Server;
+let serverPort: number;
+let client: any;
 
-const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
-  keepCase: true,
-  longs: String,
-  enums: String,
-  defaults: true,
-  oneofs: true,
-});
+const memberData = {
+  id: 1,
+  name: 'Alice Cooper',
+  email: 'alice.cooper@example.com',
+};
 
-// Load the gRPC package definition
-const grpcObject = grpc.loadPackageDefinition(packageDefinition) as any;
-
-// ✅ FIX: Access constructor correctly
-const client = new grpcObject.crudPackage.CrudService(
-  'localhost:50051',
-  grpc.credentials.createInsecure()
-);
-
-// Helper: Wrap gRPC methods in promises
-function grpcCall<T>(method: Function, data: any): Promise<T> {
-  return new Promise((resolve, reject) => {
-    method.call(client, data, (err: grpc.ServiceError | null, res: T) => {
-      if (err) reject(err);
-      else resolve(res);
-    });
+test.describe('gRPC CRUD Operations', () => {
+  test.beforeEach(async () => {
+    serverPort = await getPort();            // Get free port
+    server = await startGrpcServer(serverPort);  // Start server
+    client = createGrpcClient(serverPort);    // Create client connected to that port
   });
-}
 
-test.beforeAll(async () => {
-  await startGrpcServer();
-});
+  test.afterEach(async () => {
+    await stopGrpcServer(server);             // Stop server
+  });
 
-test.afterAll(async () => {
-  await stopGrpcServer();
-});
+  test('gRPC Create Member', async () => {
+    const response = await createMember(client, memberData);
+    expect(response.success).toBeTruthy();
+    expect(response.message).toBe('Member created successfully');
+  });
 
-test('gRPC Create Member', async () => {
-  const member = { id: 1, name: 'Alice Cooper', email: 'alice.cooper@example.com' };
-  const response = await grpcCall<{ success: boolean; message: string }>(
-    client.createMember,
-    member
-  );
+  test('gRPC Get Member', async () => {
+    await createMember(client, memberData); // Make sure member exists
+    const response = await getMember(client, { id: memberData.id });
+    expect(response.id).toBe(memberData.id);
+    expect(response.name).toBe(memberData.name);
+    expect(response.email).toBe(memberData.email);
+  });
 
-  expect(response.success).toBe(true);
-  expect(response.message).toBe('Member created successfully');
-});
+  test('gRPC Update Member', async () => {
+    await createMember(client, memberData); // Ensure member exists
+    const updatedMember = {
+      id: 1,
+      name: 'Alice Johnson',
+      email: 'alice.johnson@example.com',
+    };
+    const response = await updateMember(client, updatedMember);
+    expect(response.success).toBeTruthy();
+    expect(response.message).toBe('Member updated successfully');
+  });
 
-test('gRPC Get Member', async () => {
-  const response = await grpcCall<{ id: number; name: string; email: string }>(
-    client.getMember,
-    { id: 1 }
-  );
-
-  expect(response.id).toBe(1);
-  expect(response.name).toBe('Alice Cooper');
-  expect(response.email).toBe('alice.cooper@example.com');
-});
-
-test('gRPC Update Member', async () => {
-  const updated = { id: 1, name: 'Alice Johnson', email: 'alice.johnson@example.com' };
-  const response = await grpcCall<{ success: boolean; message: string }>(
-    client.updateMember,
-    updated
-  );
-
-  expect(response.success).toBe(true);
-  expect(response.message).toBe('Member updated successfully');
-});
-
-test('gRPC Delete Member', async () => {
-  const response = await grpcCall<{ success: boolean; message: string }>(
-    client.deleteMember,
-    { id: 1 }
-  );
-
-  expect(response.success).toBe(true);
-  expect(response.message).toBe('Member deleted successfully');
+  test('gRPC Delete Member', async () => {
+    await createMember(client, memberData); // Create before deleting
+    const response = await deleteMember(client, { id: memberData.id });
+    expect(response.success).toBeTruthy();
+    expect(response.message).toBe('Member deleted successfully');
+  });
 });
