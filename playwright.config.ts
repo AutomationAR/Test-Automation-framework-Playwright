@@ -2,10 +2,6 @@ import { defineConfig, devices } from '@playwright/test';
 import * as dotenv from 'dotenv';
 import * as path from 'path';
 
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
 // require('dotenv').config();
 // Read from ".env" file.
 dotenv.config({ path: path.resolve(__dirname, '.env') });
@@ -18,7 +14,6 @@ export default defineConfig({
   testDir: './tests',
   outputDir: './output/test-results',
   tsconfig: './tsconfig.json',
-  globalSetup: require.resolve('framework/grpc/global_setup'),
   /* Maximum time one test can run for. */
   timeout: 40 * 1000,
   expect: {
@@ -42,7 +37,6 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://automationexercise.com',
-    //DB_URL: 'postgresql://user:password@localhost:5432/your_database_name',
 
     // Set the test id to use a custom data attribute.1280
     testIdAttribute: 'data-qa',
@@ -56,25 +50,9 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'ShipIn_Automation',
+      name: 'Project_Automation',
       use: { ...devices['Desktop Chrome'], viewport: { width: 1920, height: 1080 } },
     },
-
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
-
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
-
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
     // {
     //   name: 'Mobile Safari',
     //   use: { ...devices['iPhone 12'] },

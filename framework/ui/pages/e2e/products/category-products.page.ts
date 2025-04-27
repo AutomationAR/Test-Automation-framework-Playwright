@@ -10,8 +10,8 @@ export class CategoryProductsPage extends BasePage {
     return this.page.getByRole('heading', { name: header });
   }
 
-  async expectCategoryProductsPage(title: string): Promise<void> {
+  async expectCategoryProductsPage(expectedTitle: string): Promise<void> {
     await expect(this.page).toHaveURL(/category_products/);
-    await expect(this.page).toHaveTitle(title);
+    await expect(this.page).toHaveTitle(expectedTitle);
   }
 }
